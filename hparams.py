@@ -26,13 +26,16 @@ class hparams():
   
 class hparams_colab():
   
-  batch_size = 256
+  batch_size = 64
   log_interval = 10
-  n_epoch = 10
+  n_epoch = 1000
   seed = 1234
   lr = 0.001
   wd = 0.0001
   num_classes = 3
+
+  dist_backend = 'nccl'
+  dist_url="tcp://localhost:54321"
   
   cudnn_enabled = True
   cudnn_benchmark = True
